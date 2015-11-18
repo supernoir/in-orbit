@@ -7,9 +7,10 @@ font-family: 'Exo 2', sans-serif;
 }
 
 h1 {
-  color: #336666;
+  color: #0071BC;
   font-weight: 500;
   font-family: 'Exo 2', serif;
+  margin: 5px;
 }
 
 #sources p {
@@ -20,23 +21,78 @@ font-size: 0.8em;
   width: 800px;
   margin: 10px auto;
   padding: 10px 20px;
-  background: #000;
+  background: rgb(0,0,0);
   text-align: center;
 }
 
-button{
-background-color: #333;
-border: none;
-padding: 5px;
-
+.nav{
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(50,50,50,0.7);
+  padding: 5px;
+  border-radius: 4px;
+  display: block;
 }
 
-#header {
-background-color: rgba(20,220,220,0.1);
-margin: 5px;
-padding: 1px;
-border-radius: 5px;
+
+.button {
+  font-weight: 400;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1em;
+  background-color: transparent;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 3px;
 }
+button:focus{
+  outline: none;
+}
+
+#show-ISS {
+border: 2px solid green;
+color: green;
+}
+#show-ISS.selected{
+  border: 2px solid #333;
+  color: #333;
+}
+
+#show-exosphere {
+border: 2px solid rgba(220,220,220,0.2);
+color: rgba(220,220,220,0.2);
+}
+#show-exosphere.selected{
+  border: 2px solid #333;
+  color: #333;
+}
+
+#show-mesosphere {
+  border: 2px solid rgba(220,220,220,0.4);
+  color: rgba(220,220,220,0.4);
+}
+#show-mesosphere.selected{
+  border: 2px solid #333;
+  color: #333;
+}
+
+#show-stratosphere {
+  border: 2px solid rgba(220,220,220,0.6);
+  color: rgba(220,220,220,0.6);
+}
+#show-stratosphere.selected{
+  border: 2px solid #333;
+  color: #333;
+}
+
+#show-troposphere {
+  border: 2px solid rgba(220,220,220,0.8);
+  color: rgba(220,220,220,0.8);
+}
+#show-troposphere.selected{
+  border: 2px solid #333;
+  color: #333;
+}
+
 
 
 .aside{

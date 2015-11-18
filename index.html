@@ -2,30 +2,34 @@
 <head>
    <title>In Orbit</title>
    <link rel="stylesheet" type="text/css" href="css/theme.css">
-   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
   <div class="content">
-    <div id="header">
       <h1>From our Atmosphere to Outer Space</h1>
-    </div>
     <div class="planet">
+      <div class="nav">
+        <button class="button" id="show-ISS">ISS</button>
+        <button class="button" id="show-Troposphere">Troposphere</button>
+        <button class="button" id="show-Stratosphere">Stratosphere</button>
+        <button class="button" id="show-Mesosphere">Mesosphere</button>
+        <button class="button" id="show-Exosphere">Exosphere</button>
+      </div>
       <svg version="1.1"
       	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="700px"
       	 height="700px" viewBox="0 0 665.132 665.128" enable-background="new 0 0 665.132 665.128" xml:space="preserve">
-      		<path opacity="0.3" fill="#none" stroke="#29ABE2" stroke-width="1.4173" stroke-dasharray="28.3465" d="
+      		<path id="exosphere" opacity="0.2" fill="#0071BC" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="20" d="
       			M664.423,332.556c0,183.289-148.573,331.863-331.857,331.863c-183.285,0-331.857-148.574-331.857-331.863
       			c0-183.274,148.572-331.848,331.857-331.848C515.85,0.708,664.423,149.282,664.423,332.556z"/>
-      		<path opacity="0.2" fill="#0071BC" stroke="#FFFFFF" stroke-width="1.4173" stroke-dasharray="22.6772" d="M424.421,332.562
+      		<path id="mesosphere" opacity="0.3" fill="#0071BC" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="10" d="M424.421,332.562
       			c0,50.732-41.128,91.857-91.855,91.857c-50.731,0-91.855-41.125-91.855-91.857c0-50.73,41.124-91.854,91.855-91.854
       			C383.293,240.708,424.421,281.832,424.421,332.562z"/>
 
-      			<circle opacity="0.2" fill="#0071BC" stroke="#FFFFFF" stroke-width="1.4173" stroke-dasharray="17.0079" cx="332.566" cy="332.563" r="61.855"/>
+      			<circle id="stratosphere" opacity="0.4" fill="#0071BC" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5" cx="332.566" cy="332.563" r="61.855"/>
 
-      			<circle opacity="0.2" fill="#E6E6E6" stroke="#FFFFFF" stroke-width="1.4173" stroke-dasharray="" cx="332.566" cy="332.563" r="39.355"/>
-      		<circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4173" cx="332.566" cy="332.563" r="31.855"/>
-      			<path fill="#B3B3B3" d="M364.421,332.578c0,8.861-3.132,16.379-9.394,22.565c-6.263,6.184-13.755,9.276-22.48,9.276
+      			<circle id="troposphere" opacity="0.5" fill="#0071BC" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2.5" cx="332.566" cy="332.563" r="39.355"/>
+      		<!--<circle id="earth" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4173" cx="332.566" cy="332.563" r="31.855"/>-->
+      			<path id="contintents" fill="#FFFFFF" d="M364.421,332.578c0,8.861-3.132,16.379-9.394,22.565c-6.263,6.184-13.755,9.276-22.48,9.276
       				c-8.722,0-16.208-3.093-22.459-9.276c-6.252-6.187-9.377-13.704-9.377-22.565c0-8.854,3.136-16.396,9.41-22.625
       				c6.229-6.162,13.705-9.244,22.427-9.244c8.726,0,16.202,3.082,22.432,9.244C361.273,316.182,364.421,323.723,364.421,332.578z
       				 M362.291,332.811v-1.168c-5.662-0.622-8.504-0.934-8.524-0.934c-0.133,0-1.574,0.145-4.329,0.434l1.639,3.208l-4.195,1.536
@@ -54,23 +58,41 @@
       		<circle id="ISS-Station" fill="#FF00FF" cx="145.668" cy="364.159" r="3.25"/>
       </svg>
     </div>
-    <div class="nav">
-      <button id="show-ISS">Toggle ISS</button>
-    </div>
+
 
 <script type="text/javascript">
+
+
+
+/** BUTTONS TOGGLE SVG LAYERS **/
+
+$( "#show-Exosphere" ).click(function() {
+  $( "#show-Exosphere" ).toggleClass( "selected" );
+  $( "#exosphere" ).toggle( "slow" );
+});
+$( "#show-Mesosphere" ).click(function() {
+  $( "#show-Mesosphere" ).toggleClass( "selected" );
+  $( "#mesosphere" ).toggle( "slow" );
+});
+$( "#show-Stratosphere" ).click(function() {
+  $( "#show-Stratosphere" ).toggleClass( "selected" );
+  $( "#stratosphere" ).toggle( "slow" );
+});
+$( "#show-Troposphere" ).click(function() {
+  $( "#show-Troposphere" ).toggleClass( "selected" );
+  $( "#troposphere" ).toggle( "slow" );
+});
 $( "#show-ISS" ).click(function() {
+  $( "#show-ISS" ).toggleClass( "selected" );
   $( "#ISS-Station" ).toggle( "slow" );
   $( "#ISS-Range" ).toggle( "slow" );
 });
 </script>
-    <div class="aside">
+<!--    <div class="aside">
       <p id="aside_head">Exosphere</p>
       <p id="aside_text">Lorem Ipsum dolor sit amet</p>
-    </div>
-    <div id="sources">
-      <p>Drawn to scale</p>
-    </div>
+    </div>-->
+
   </div>
 </body>
 </html>
