@@ -15,6 +15,28 @@
         <button class="button" id="show-Mesosphere">Mesosphere</button>
         <button class="button" id="show-Exosphere">Exosphere</button>
       </div>
+      <div class="aside">
+        <div id="aside_exosphere">
+          <p id="aside_head">Exosphere</p>
+          <p id="aside_text">The Exosphere starts roughly 600km above Earth. It's what people call "Outer Space". </p>
+        </div>
+        <div id="aside_mesosphere">
+          <p id="aside_head">Mesosphere</p>
+          <p id="aside_text">The Mesosphere extends from about 50km to around 120km above Earth. It's home to the coldest naturally occuring temperatures on earth. It is both maximum altitude for regular aircraft but below the minimum altitude for orbital spacecraft.</p>
+        </div>
+        <div id="aside_stratosphere">
+          <p id="aside_head">Stratosphere</p>
+          <p id="aside_text">The Stratosphere reaches from as low as 7km above earth's surface to up to 60km. It's lower parts mark the planetary boundary layer. Since it harbors about 99% of our water vapor and aerosols, it also is the area in which our day-to-day weather is "generated"</p>
+        </div>
+        <div id="aside_troposphere">
+          <p id="aside_head">Troposphere</p>
+          <p id="aside_text">The Troposphere starts on the surface of our planet and reaches far above the clouds, to up to 15km. This is the altitude where most airplane traffic occurs.</p>
+        </div>
+        <div id="aside_iss">
+          <p id="aside_head_iss">International Space Station</p>
+          <p id="aside_text_iss">The International Space Station (ISS) constantly maneuvers in low Earth orbit. It can often be seen with the naked eye from Earth. It sustains an environment of microgravity.</p>
+        </div>
+      </div>
       <svg version="1.1"
       	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="700px"
       	 height="700px" viewBox="0 0 665.132 665.128" enable-background="new 0 0 665.132 665.128" xml:space="preserve">
@@ -66,32 +88,75 @@
 
 /** BUTTONS TOGGLE SVG LAYERS **/
 
+
+// EXOSPHERE
 $( "#show-Exosphere" ).click(function() {
   $( "#show-Exosphere" ).toggleClass( "selected" );
   $( "#exosphere" ).toggle( "slow" );
 });
+$( "#show-Exosphere" ).mouseenter(function() {
+  $( "#aside_exosphere" ).show( "fast" );
+});
+$( "#show-Exosphere" ).mouseleave(function() {
+  $( "#aside_exosphere" ).hide( "fast" );
+});
+
+// MESOSPHERE
 $( "#show-Mesosphere" ).click(function() {
   $( "#show-Mesosphere" ).toggleClass( "selected" );
   $( "#mesosphere" ).toggle( "slow" );
 });
+$( "#show-Mesosphere" ).mouseenter(function() {
+  $( "#aside_mesosphere" ).show( "fast" );
+});
+$( "#show-Mesosphere" ).mouseleave(function() {
+  $( "#aside_mesosphere" ).hide( "fast" );
+});
+
+// STRATOSPHERE
+
 $( "#show-Stratosphere" ).click(function() {
   $( "#show-Stratosphere" ).toggleClass( "selected" );
   $( "#stratosphere" ).toggle( "slow" );
 });
+
+$( "#show-Stratosphere" ).mouseenter(function() {
+  $( "#aside_stratosphere" ).show( "fast" );
+});
+$( "#show-Stratosphere" ).mouseleave(function() {
+  $( "#aside_stratosphere" ).hide( "fast" );
+});
+
+
+// TROPOSPHERE
+
 $( "#show-Troposphere" ).click(function() {
   $( "#show-Troposphere" ).toggleClass( "selected" );
   $( "#troposphere" ).toggle( "slow" );
 });
+$( "#show-Troposphere" ).mouseenter(function() {
+  $( "#aside_troposphere" ).show( "fast" );
+});
+$( "#show-Troposphere" ).mouseleave(function() {
+  $( "#aside_troposphere" ).hide( "fast" );
+});
+
+
+// ISS
+
 $( "#show-ISS" ).click(function() {
   $( "#show-ISS" ).toggleClass( "selected" );
   $( "#ISS-Station" ).toggle( "slow" );
   $( "#ISS-Range" ).toggle( "slow" );
 });
+
+$( "#show-ISS" ).mouseenter(function() {
+  $( "#aside_iss" ).show( "fast" );
+});
+$( "#show-ISS" ).mouseleave(function() {
+  $( "#aside_iss" ).hide( "fast" );
+});
 </script>
-<!--    <div class="aside">
-      <p id="aside_head">Exosphere</p>
-      <p id="aside_text">Lorem Ipsum dolor sit amet</p>
-    </div>-->
 
   </div>
 </body>

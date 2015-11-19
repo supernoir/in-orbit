@@ -93,14 +93,34 @@ color: rgba(220,220,220,0.2);
   color: #333;
 }
 
+#ISS-Station {
+  fill: green;
+}
 
+#ISS-Range {
+  stroke: green;
+}
+
+#ISS-Label {
+  color: green;
+}
 
 .aside{
-  width: 200px;
-  background-color: rgba(220,220,220,0.1);
+  width: 80%;
+  background-color: rgba(50,50,50,0.4);
   padding: 5px;
-  margin: 5px;
+  margin: 20px auto;
   border-radius: 4px;
+  min-height: 8em;
+}
+
+#aside_exosphere,
+#aside_mesosphere,
+#aside_stratosphere,
+#aside_mesosphere,
+#aside_troposphere,
+#aside_iss{
+  display: none;
 }
 
 #aside_head{
@@ -113,20 +133,17 @@ color: rgba(220,220,220,0.2);
   color: #999;
 }
 
+#aside_head_iss{
+  font-weight: bold;
+  color: green;
+}
+
+#aside_text_iss{
+  font-weight: normal;
+  color: green;
+}
 
 .planet {
   width: 100%;
   margin: 1em auto;
-}
-
-#ISS-Station {
-  fill: green;
-}
-
-#ISS-Range {
-  stroke: green;
-}
-
-#ISS-Label {
-  color: green;
 }
